@@ -7,9 +7,9 @@ const openai = new OpenAIApi();
 export const handler = async (event: MealPlanRequest) => {
   const { email, ingredients } = event;
 
-  const prompt = `Generate a dinner mealplan for the whole week with these ingredients: ${ingredients.join(
+  const prompt = `Generate a gluten-free dinner mealplan for the whole week with these ingredients: ${ingredients.join(
     ", "
-  )} and with other random ingredients.
+  )} and with other random gluten free ingredients.
 Result in must be in json format
 Each meal recipe contains a name, a five sentences for instructions and an array of ingredients`;
 
